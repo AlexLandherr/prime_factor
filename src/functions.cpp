@@ -19,9 +19,6 @@ namespace func {
             }
         }
 
-        //Sort vector to find max value (in descending order).
-        std::sort(prime_factors.begin(), prime_factors.end());
-
         //Find max prime factor of n by accessing the last element in prime_factors.
         return prime_factors.back();
     }
