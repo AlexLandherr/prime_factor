@@ -12,8 +12,13 @@ namespace func {
         //Vector to hold prime factors of n.
         std::vector<int64_t> prime_factors;
 
+        //Special case for 2.
+        if (n % 2 == 0) {
+            prime_factors.push_back(2);
+        }
+
         //Loop to find prime factors of n.
-        for (int i = 1; i <= std::sqrt(n); i++) {
+        for (int i = 3; i <= std::sqrt(n); i+=2) {
             if (n % i == 0 && is_prime(i)) {
                 prime_factors.push_back(i);
             }
